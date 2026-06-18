@@ -1,0 +1,118 @@
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent-neon: #38bdf8;
+    --text-main: #f8fafc;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--card-bg);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#live-clock {
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: var(--accent-neon);
+    background: #020617;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+#chart-panel {
+    grid-column: span 2;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    background: #020617;
+    border: 1px solid #475569;
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background: var(--accent-neon);
+    color: #020617;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    min-height: 20px;
+}
+
+.matrix-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.node-row {
+    background: #020617;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-neon);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.node-row.warning {
+    border-left-color: var(--accent-neon);
+    background: #451a26;
+}
+
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
