@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse: Interactive Analytical Suite</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+
+    <div class="dashboard-container">
+        <header>
+            <h1>PULSE // Analytical Dashboard</h1>
+            <div id="live-clock">Syncing System Time...</div>
+        </header>
+
+        <main class="grid-layout">
+                <section class="card" id="setting-panel">
+                    <h2>Add New Metric Node</h2>
+
+                    <form id="metric-form">
+                        <div class="form-grup">
+                            <label for="node-time">Node Name:</label>
+                            <input type="text" id="node-name" placeholder="e.g. Server Data">
+                        </div>
+                        <div class="form-group">
+                            <label for="node-value">Initial Capacity (10 - 100):</label>
+                            <input type="number" id="node-value" placeholder="Enter a number">
+                        </div>
+                        <button type="submit" id="submit-btn">Deploy Node</button>
+                        <div id="error-feedback" class="feedback"></div>
+                    </form>
+                </section>
+
+
+                <section class="card" id="nodes-panel">
+                    <h2>Active Nodes (Nested Processing)</h2>
+                    <div id="node-matrix" class="matrix-grid"></div>
+                </section>
+
+                <section class="card" id="chart-panel">
+                    <h2>Spontaneous Live Feed</h2>
+                    <div class="chart-container">
+                        <canvas id="liveChart"></canvas>
+                    </div>
+                </section>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
